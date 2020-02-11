@@ -4,7 +4,7 @@ Two implementation of the Observer pattern in Mobx - a simple version and a more
 
 ## install and run
 
-npm i
+npm i\
 npm start
 
 ## Observer Pattern
