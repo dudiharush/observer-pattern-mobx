@@ -1,10 +1,7 @@
 import * as mobx from './mobx'
 import * as simpleMobx from './mobx-simplified'
 
-const firstname = mobx.observable('some name')
-const dispose = mobx.autorun(() => {
-  console.log(firstname.get())
-})
+// simple version usage:
 
 const o = simpleMobx.observable({ x: 1, y: 2 })
 simpleMobx.autorun(() => {
@@ -12,6 +9,13 @@ simpleMobx.autorun(() => {
 })
 o.x = 10
 o.x = 20
+
+// complex version usage:
+
+const firstname = mobx.observable('some name')
+const dispose = mobx.autorun(() => {
+  console.log(firstname.get())
+})
 
 firstname.set('some name 1')
 dispose()
