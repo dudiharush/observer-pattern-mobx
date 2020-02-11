@@ -19,8 +19,8 @@ Steps:
 
 Steps:
 
-1. The Observer is saved in a global scope (1,2 from pattern)
-2. The Subject adds the Observer from global scope (3 from pattern)
+1. The Observer is saved in a global scope (steps 1,2 from pattern)
+2. The Subject adds the Observer from global scope (step 3 from pattern)
 
 ## mobx (more complex)
 
@@ -32,8 +32,8 @@ the Subject sends itself to the Observer, and the observer is not only calling t
 
 Steps:
 
-1. The Obs saved in a global scope, unsubscribes from all Subjects (clear subs, prepare for 1 in pattern)
-2. thunk run: The Sub sends itself to the Obs in global scope, which adds the Sub to a list (1 from pattern) x num of Subjects
-3. The Obs subscribes to all subjects (2, 3 in pattern)
+1. The Observer saved in a global scope, unsubscribes from all Subjects (clear subs, prepare for step 1 in pattern)
+2. thunk run: The Sub sends itself to the Obs in global scope, which adds the Subject to a list (step 1 from pattern) x num of Subjects
+3. The Observer subscribes to subjects in the list (steps 2, 3 in pattern)
 
 from: RuhrJS 2016 https://www.youtube.com/watch?v=TfxfRkNCnmk
