@@ -2,7 +2,7 @@
 
 Two implementation of the Observer pattern in Mobx - a simple version and a more complex one
 
-## install and run
+## Install and Run
 
 npm i\
 npm start
@@ -15,7 +15,7 @@ Steps:
 2. The Observer sends itself to the subscribe method of the Subject.
 3. The Subject adds the Observer to his observers list.
 
-## mobx simplified
+## mobx (simplified)
 
 Steps:
 
