@@ -15,14 +15,14 @@ Steps:
 2. The Observer sends itself to the subscribe method of the Subject.
 3. The Subject adds the Observer to his observers list.
 
-## mobx (simplified)
+## Mobx (simplified)
 
 Steps:
 
 1. The Observer is saved in a global scope (steps 1,2 from pattern)
 2. The Subject adds the Observer from global scope (step 3 from pattern)
 
-## mobx (more complex)
+## Mobx (more complex)
 
 Descriptions:
 autorun = 1 Observer with multiple Subjects (observables) registration calls.
