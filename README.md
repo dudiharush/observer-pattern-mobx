@@ -1,0 +1,39 @@
+# Mobx - Observer Pattern In Javascript
+
+Two implementation of the Observer pattern in Mobx - a simple version and a more complex one
+
+## install and run
+
+npm i
+npm start
+
+## Observer Pattern
+
+Steps:
+
+1. The Observer gets a Subject
+2. The Observer sends itself to the subscribe method of the Subject.
+3. The Subject adds the Observer to his observers list.
+
+## mobx simplified
+
+Steps:
+
+1. The Observer is saved in a global scope (1,2 from pattern)
+2. The Subject adds the Observer from global scope (3 from pattern)
+
+## mobx (more complex)
+
+Descriptions:
+autorun = 1 Observer with multiple Subjects (observables) registration calls.
+We keep a list of subjects in the autorun, so we can unsbscribe the observer from all of them
+Unlike the simplified version above, where the Subject adds the Observer directly,
+the Subject sends itself to the Observer, and the observer is not only calling the register (add Dependancy) of the Subject, but first it adds the subject to a subjects list, so we can unsubscribe the observer from all the subjects.
+
+Steps:
+
+1. The Obs saved in a global scope, unsubscribes from all Subjects (clear subs, prepare for 1 in pattern)
+2. thunk run: The Sub sends itself to the Obs in global scope, which adds the Sub to a list (1 from pattern) x num of Subjects
+3. The Obs subscribes to all subjects (2, 3 in pattern)
+
+from: RuhrJS 2016 https://www.youtube.com/watch?v=TfxfRkNCnmk
