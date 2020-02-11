@@ -28,7 +28,7 @@ Descriptions:
 autorun = 1 Observer with multiple Subjects (observables) registration calls.
 We keep a list of subjects in the autorun, so we can unsbscribe the observer from all of them
 Unlike the simplified version above, where the Subject adds the Observer directly,
-the Subject sends itself to the Observer, and the observer is not only calling the register (add Dependancy) of the Subject, but first it adds the subject to a subjects list, so we can unsubscribe the observer from all the subjects.
+the Subject sends itself to the Observer, and the observer is not only calling the register (add Subject) of the Subject, but first it adds the subject to a subjects list, so we can unsubscribe the observer from all the subjects.
 
 Steps:
 
